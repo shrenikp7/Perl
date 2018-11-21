@@ -17,7 +17,7 @@ print $status;
 if ($status != 0)
         {
         my $send_mail=`mailx -s "There is an error in MySQL error log for <db_name> on $hostname !! " $MAIL_LIST < /mysql/logs/<db_name>.err`;
-        my $rename=`mv /mysql/nvmtst/logs/nvmtst.err  /mysql/logs/<db_name>.err.$date`;
+        my $rename=`mv /mysql/<db_name>/logs/<db_name>.err  /mysql/logs/<db_name>.err.$date`;
         my $file=`touch /mysql/logs/<db_name>.err`
         }
 }
