@@ -21,3 +21,8 @@ if ($status != 0)
         my $file=`touch /mysql/logs/<db_name>.err`
         }
 }
+
+
+## Add following in the crontab of mysql user
+## Scan MySQL error log for <DB_NAME> and send notification
+5,10,15,20,25,30,35,40,45,50,55 * * * * /mysql/admin/scripts/chk_err.pl >/dev/null 2>&1
