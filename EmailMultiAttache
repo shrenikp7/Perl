@@ -1,0 +1,11 @@
+#!/bin/perl
+use strict;
+use warnings;
+shreniksctipt();
+sub shrenikscript
+{
+my $PATH="/mysql/admin/scripts";
+my $MAIL_LIST="shrenik\@example.com shrenikp\@example.com";
+my $send_mail=`mailx -a $PATH/<file_name>.sql -a $PATH/<file_name>.json -s " Shrenik's scripts!" $MAIL_LIST < /dev/null`;
+exit;
+}
